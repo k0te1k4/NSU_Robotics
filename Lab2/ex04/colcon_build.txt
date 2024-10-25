@@ -1,0 +1,117 @@
+[0.239s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'examples_rclpy_minimal_subscriber' is in: /home/parallels/ros2_ws/install/examples_rclpy_minimal_subscriber, /opt/ros/humble
+	'examples_rclcpp_minimal_action_client' is in: /home/parallels/ros2_ws/install/examples_rclcpp_minimal_action_client, /opt/ros/humble
+	'examples_rclcpp_minimal_composition' is in: /home/parallels/ros2_ws/install/examples_rclcpp_minimal_composition, /opt/ros/humble
+	'examples_rclpy_minimal_publisher' is in: /home/parallels/ros2_ws/install/examples_rclpy_minimal_publisher, /opt/ros/humble
+	'examples_rclcpp_multithreaded_executor' is in: /home/parallels/ros2_ws/install/examples_rclcpp_multithreaded_executor, /opt/ros/humble
+	'examples_rclcpp_minimal_client' is in: /home/parallels/ros2_ws/install/examples_rclcpp_minimal_client, /opt/ros/humble
+	'examples_rclpy_minimal_client' is in: /home/parallels/ros2_ws/install/examples_rclpy_minimal_client, /opt/ros/humble
+	'examples_rclpy_minimal_action_client' is in: /home/parallels/ros2_ws/install/examples_rclpy_minimal_action_client, /opt/ros/humble
+	'examples_rclcpp_minimal_publisher' is in: /home/parallels/ros2_ws/install/examples_rclcpp_minimal_publisher, /opt/ros/humble
+	'examples_rclcpp_minimal_action_server' is in: /home/parallels/ros2_ws/install/examples_rclcpp_minimal_action_server, /opt/ros/humble
+	'examples_rclcpp_minimal_timer' is in: /home/parallels/ros2_ws/install/examples_rclcpp_minimal_timer, /opt/ros/humble
+	'examples_rclpy_executors' is in: /home/parallels/ros2_ws/install/examples_rclpy_executors, /opt/ros/humble
+	'examples_rclcpp_minimal_subscriber' is in: /home/parallels/ros2_ws/install/examples_rclcpp_minimal_subscriber, /opt/ros/humble
+	'examples_rclpy_minimal_action_server' is in: /home/parallels/ros2_ws/install/examples_rclpy_minimal_action_server, /opt/ros/humble
+	'examples_rclcpp_minimal_service' is in: /home/parallels/ros2_ws/install/examples_rclcpp_minimal_service, /opt/ros/humble
+	'examples_rclpy_minimal_service' is in: /home/parallels/ros2_ws/install/examples_rclpy_minimal_service, /opt/ros/humble
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding examples_rclcpp_minimal_action_client examples_rclcpp_minimal_action_server examples_rclcpp_minimal_client examples_rclcpp_minimal_composition examples_rclcpp_minimal_publisher examples_rclcpp_minimal_service examples_rclcpp_minimal_subscriber examples_rclcpp_minimal_timer examples_rclcpp_multithreaded_executor examples_rclpy_executors examples_rclpy_minimal_action_client examples_rclpy_minimal_action_server examples_rclpy_minimal_client examples_rclpy_minimal_publisher examples_rclpy_minimal_service examples_rclpy_minimal_subscriber
+
+This may be promoted to an error in a future release of colcon-override-check.
+Starting >>> examples_rclcpp_async_client
+Starting >>> examples_rclcpp_cbg_executor
+Finished <<< examples_rclcpp_async_client [0.58s]
+Starting >>> examples_rclcpp_minimal_action_client
+Finished <<< examples_rclcpp_cbg_executor [0.62s]
+Starting >>> examples_rclcpp_minimal_action_server
+Finished <<< examples_rclcpp_minimal_action_server [0.52s]
+Starting >>> examples_rclcpp_minimal_client
+Finished <<< examples_rclcpp_minimal_action_client [0.58s]
+Starting >>> examples_rclcpp_minimal_composition
+Finished <<< examples_rclcpp_minimal_client [0.48s]
+Starting >>> examples_rclcpp_minimal_publisher
+Finished <<< examples_rclcpp_minimal_composition [0.56s]
+Starting >>> examples_rclcpp_minimal_service
+Finished <<< examples_rclcpp_minimal_publisher [0.55s]
+Starting >>> examples_rclcpp_minimal_subscriber
+Finished <<< examples_rclcpp_minimal_service [0.48s]
+Starting >>> examples_rclcpp_minimal_timer
+Finished <<< examples_rclcpp_minimal_timer [0.54s]
+Starting >>> examples_rclcpp_multithreaded_executor
+Finished <<< examples_rclcpp_minimal_subscriber [0.70s]
+Starting >>> examples_rclcpp_wait_set
+Finished <<< examples_rclcpp_multithreaded_executor [0.55s]
+Starting >>> examples_rclpy_executors
+Finished <<< examples_rclcpp_wait_set [0.83s]                                  
+Starting >>> examples_rclpy_guard_conditions
+--- stderr: examples_rclpy_executors                                     
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< examples_rclpy_executors [0.76s]
+Starting >>> examples_rclpy_minimal_action_client
+--- stderr: examples_rclpy_guard_conditions
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< examples_rclpy_guard_conditions [0.75s]
+Starting >>> examples_rclpy_minimal_action_server
+--- stderr: examples_rclpy_minimal_action_client
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< examples_rclpy_minimal_action_client [0.72s]
+Starting >>> examples_rclpy_minimal_client
+--- stderr: examples_rclpy_minimal_action_server
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< examples_rclpy_minimal_action_server [0.86s]
+Starting >>> examples_rclpy_minimal_publisher
+--- stderr: examples_rclpy_minimal_client                                     
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< examples_rclpy_minimal_client [0.83s]
+Starting >>> examples_rclpy_minimal_service
+--- stderr: examples_rclpy_minimal_publisher
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< examples_rclpy_minimal_publisher [0.84s]
+Starting >>> examples_rclpy_minimal_subscriber
+--- stderr: examples_rclpy_minimal_service                                     
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< examples_rclpy_minimal_service [0.71s]
+Starting >>> examples_rclpy_pointcloud_publisher
+--- stderr: examples_rclpy_minimal_subscriber
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< examples_rclpy_minimal_subscriber [0.71s]
+Starting >>> k0te1k4
+--- stderr: examples_rclpy_pointcloud_publisher
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< examples_rclpy_pointcloud_publisher [0.76s]
+Starting >>> lab2-3
+Finished <<< lab2-3 [0.47s]                                   
+Starting >>> launch_testing_examples
+Finished <<< k0te1k4 [0.92s]                                  
+Starting >>> my_package
+--- stderr: launch_testing_examples                                     
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+---
+Finished <<< launch_testing_examples [0.73s]
+Finished <<< my_package [0.89s]                       
+
+Summary: 25 packages finished [8.86s]
+  10 packages had stderr output: examples_rclpy_executors examples_rclpy_guard_conditions examples_rclpy_minimal_action_client examples_rclpy_minimal_action_server examples_rclpy_minimal_client examples_rclpy_minimal_publisher examples_rclpy_minimal_service examples_rclpy_minimal_subscriber examples_rclpy_pointcloud_publisher launch_testing_examples
